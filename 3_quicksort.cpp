@@ -1,4 +1,5 @@
 #include <iostream> 
+#include <stdlib.h>
 #include <time.h> 
 using namespace std; 
 /* Program3: Quicksort*/ 
@@ -50,7 +51,7 @@ void quicksort(int a[],int low,int high)
 } 
  
  
-void main() 
+int main() 
 { 
   int i,n,a[20000]; 
   clock_t start,end; 
