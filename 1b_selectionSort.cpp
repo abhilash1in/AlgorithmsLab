@@ -45,7 +45,7 @@ int main()
   } 
  
  
-//Call quicksort function 
+//Call selection sort function 
 start=clock(); 
 selectSort(a,n); 
 end=clock(); 
