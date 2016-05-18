@@ -1,22 +1,21 @@
-#include<iostream>
-#include<math.h>
-#include<time.h>
+#include <iostream>
+#include <math.h>
+#include <time.h>
 using namespace std;
 
 int h[50];
 void heapify(int h[],int n)
 {
-  int i,j,n1,k,heap,v;
-  n1=n;
-  for(i=n1/2;i>=1;i--)
+  int i,j,k,heap,v;
+  for(i=n/2;i>=1;i--)
   {
     k=i;
     v=h[k];
     heap=0;
-    while(!(heap) && (2*k)<=n1)
+    while(!(heap) && (2*k)<=n)
     {
       j=2*k;
-      if(j < n1)
+      if(j < n)
         if(h[j] < h[j+1])
           j = j + 1;
       if(v >= h[j])
@@ -44,11 +43,14 @@ void heapify(int h[],int n)
     //h[i]=rand();
       cin>>h[i];
     }
+    //display elements
+    /*
     cout<<"elements\n";
     for(i = 1;i <= n; i++)
     {
       cout<<h[i]<<endl;
     }
+    */
     start=clock();
     heapify(h,n);
     cout<<"elemts heapified:\n";

@@ -1,6 +1,6 @@
 #include <iostream>
 #include<string.h>
-#define MAX 50
+#define MAX 200
 using namespace std;
 
 
@@ -12,7 +12,9 @@ void shifttable(string p)
 	for(i=0;i<MAX;i++)
 		t[i]=m;
 	for(j=0;j<m-1;j++)
-		t[(int)p[j]]=m-1-j;
+		{
+			t[(int)p[j]]=m-1-j;
+		}
 }
 
 int horspol(string src, string p)

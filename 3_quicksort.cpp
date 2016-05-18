@@ -13,7 +13,7 @@ int partition(int a[], int low, int high)
   j=high; 
   while(i<=j) 
   { 
-    while(i<=j&&key>=a[i]) 
+    while(i<=j && key>=a[i]) 
     i=i+1; 
  
     while(key<a[j]) 
@@ -35,25 +35,24 @@ int partition(int a[], int low, int high)
  
 return j; 
 } 
- 
- 
- 
+  
 //Sorts array in ascending order 
 void quicksort(int a[],int low,int high) 
 { 
   int pos; 
-  if(low<high) 
-  { 
+  if (low>=high)
+    return;
+
    pos=partition(a,low,high); 
    quicksort(a,low,pos-1); 
    quicksort(a,pos+1,high); 
-  } 
+  
 } 
  
  
 int main() 
 { 
-  int i,n,a[20000]; 
+  int i,n,a[500000]; 
   clock_t start,end; 
   double totaltime;  
   cout<<"enter the value of n\n";
@@ -72,9 +71,9 @@ quicksort(a,0,n-1);
 end=clock(); 
  
 //Display sorted array 
-cout<<"sorted array\n"; 
-for(i=0;i<n;i++) 
-cout<<a[i]<<endl; 
+//cout<<"sorted array\n"; 
+//for(i=0;i<n;i++) 
+//cout<<a[i]<<endl; 
  
 //Display the time taken to sort the elements 
 totaltime=(double)(end-start)/CLOCKS_PER_SEC; 

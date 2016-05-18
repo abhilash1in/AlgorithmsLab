@@ -21,7 +21,7 @@ void merge(int a[],int low,int mid,int high)
  
  
   for(k=low;k<=high;k++) 
-  a[k]=b[k]; 
+    a[k]=b[k]; 
 } 
  
  
@@ -54,7 +54,6 @@ int main()
     r=rand(); 
     a[k]=r; 
   } 
- 
  
   start=clock(); 
   mergesort(a,0,n-1); 
