@@ -37,15 +37,15 @@ int main()
             a=u=i;
             b=v=j;
           }
-        }
-
-      if(visited[u]==0 || visited[v]==0)
-      {
-        cout<<"Edge "<<ne++<<"\t("<<a<<"->"<<b<<")="<<min<<endl;
-        min_cost=min_cost+min;
-        visited[b]=1;
       }
-      cost[a][b]=cost[b][a]=999;
-    }
-    cout<<"\nminimum cost="<<min_cost<<endl;
+
+        if(visited[u]==0 || visited[v]==0)
+        {
+          cout<<"Edge "<<ne++<<"\t("<<a<<"->"<<b<<")="<<min<<endl;
+          min_cost=min_cost+min;
+          visited[b]=1;
+        }
+        cost[a][b]=cost[b][a]=999;
   }
+    cout<<"\nminimum cost="<<min_cost<<endl;
+}

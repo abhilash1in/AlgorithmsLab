@@ -16,7 +16,7 @@ void print(int n)
   cout<<"\n\nSolution : "<<++count;
   for(i=1;i<=n;++i)
   {
-//cout<<"\n"<<i;
+  cout<<"\n"<<i;
     for(j=1;j<=n;++j)
     {
       if(board[i]==j)

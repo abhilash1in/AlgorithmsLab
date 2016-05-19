@@ -1,5 +1,5 @@
 #include <iostream>
-#include<string.h>
+#include <string.h>
 #define MAX 200
 using namespace std;
 
@@ -12,9 +12,7 @@ void shifttable(string p)
 	for(i=0;i<MAX;i++)
 		t[i]=m;
 	for(j=0;j<m-1;j++)
-		{
-			t[(int)p[j]]=m-1-j;
-		}
+		t[(int)p[j]]=m-1-j;
 }
 
 int horspol(string src, string p)
@@ -26,7 +24,7 @@ int horspol(string src, string p)
 	cout<<"\nlength of pattern="<<m<<endl;
 	i=m-1;
 	while(i<=n-1)
-	{
+	{   
 		k=0;
 		while((k<=m-1)&&(p[m-1-k]==src[i-k]))
 		k++;

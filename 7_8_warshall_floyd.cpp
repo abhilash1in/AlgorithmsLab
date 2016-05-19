@@ -10,7 +10,7 @@ void warshall(int** a,int n)
     for(k=0;k<n;k++)
         for(i=0;i<n;i++)
             for(j=0;j<n;j++)
-                a[i][j] = (a[i][j]||(a[i][k]&&a[k][j]));
+                a[i][j] = (a[i][j]||(a[i][k] && a[k][j]));
 }
 
 void floyd(int** a,int n)
@@ -21,7 +21,6 @@ void floyd(int** a,int n)
         for(i=0;i<n;i++)
             for(j=0;j<n;j++)
                 a[i][j] = min(a[i][j],(a[i][k]+a[k][j]));
-
 }
 
 int main()
@@ -43,8 +42,8 @@ int main()
 
     cout<<"Enter the values of the matrix \n";
     for(int i=0;i<n;i++)
-    for(int j=0;j<n;j++)
-    cin>>a[i][j];
+        for(int j=0;j<n;j++)
+            cin>>a[i][j];
 
 
     switch(ch)
@@ -54,9 +53,9 @@ int main()
             cout<<endl<<endl<<"Transitive closure: \n";
             for(int i=0;i<n;i++)
             {
-            for(int j=0;j<n;j++)
-            cout<<a[i][j]<<"\t";
-            cout<<endl;
+                for(int j=0;j<n;j++)
+                    cout<<a[i][j]<<"\t";
+                cout<<endl;
             }
         break;
 
@@ -69,8 +68,7 @@ int main()
                     cout<<a[i][j]<<"\t";
                 cout<<endl;
             }
-    break;
-    default:cout<<"Invalid choice \n";
-}    
-
+        break;
+        default:cout<<"Invalid choice \n";
+    }
 }
